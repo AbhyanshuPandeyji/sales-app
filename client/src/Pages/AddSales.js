@@ -13,12 +13,12 @@ const AddSales = () => {
 
     const {currentUser} = useSelector((state) => state.user);
 
-    // text in tweet
+    // text in sales
     const [product, setProduct] = useState("");
     const [quantity, setQuantity] = useState("");
     const [amount, setAmount] = useState("");
 
-    // for posting tweet into database
+    // for posting sales into database
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -29,7 +29,7 @@ const AddSales = () => {
                 amount: amount
             });
             
-            // refresh after posting tweet
+            // refresh after posting all sales
             console.log(submitSales);
             window.location.reload(false);
 

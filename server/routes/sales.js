@@ -1,6 +1,6 @@
 import express from "express";
 import { verifyToken } from "../verifyToken.js";
-import { deleteSale  , getAllSales , createSales } from "../controllers/sale.js";
+import { deleteSale  , getAllSales , createSales , getTotalRevenue } from "../controllers/sale.js";
 
 
 
@@ -16,5 +16,9 @@ router.delete('/:id' ,verifyToken , deleteSale );
 
 // get Explore Tweets
 router.get("/allsales" , getAllSales);
+
+// total revenue
+router.get("/totalrevenue" , getTotalRevenue );
+
 
 export default router;
