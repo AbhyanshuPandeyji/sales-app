@@ -11,9 +11,6 @@ const UserSchema = new mongoose.Schema(
     email: { type: String , required: true , unique: true },
     password: { type: String , required: true },
     // profile picture will be an url to link it 
-    profileProfile: { type: String },
-    description: { type: String},
-
     },
     // for when user is being created
     { timestamps : true}

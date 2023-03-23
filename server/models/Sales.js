@@ -18,7 +18,7 @@ const AddSalesSchema = new mongoose.Schema(
             type: Number,
             defaultValue: 0,
         },
-        Amount:{
+        amount:{
             type: Number,
             defaultValue: 0,
         },
