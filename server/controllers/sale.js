@@ -8,6 +8,7 @@ import {handleError} from '../error.js'
 
 // For getting the tweets of out users
 import User from "../models/User.js"
+import { getAllSales } from './sale';
 
 
 // posting a tweet
@@ -49,12 +50,12 @@ export const getAllSales = async (req, res, next) => {
     try { 
   
         // find all tweets done by our user using the id in tweet body
-        const getExploreTweets  = await Sales.find({}).sort({
+        const getAllSales  = await Sales.find({}).sort({
             createdAt : -1,
         })
         
         // we take our tweets and all all the followers tweets together
-        res.status(200).json(getExploreTweets);
+        res.status(200).json(getAllSales);
     } catch (error) {
         handleError(500, error);
     }
